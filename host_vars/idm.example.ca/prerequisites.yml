@@ -33,6 +33,6 @@ ipa_crypto_policy: "DeFaULt"
 # These are simply test values
 etc_hosts_list:
   - ip: "192.168.140.13"
-    fqdn: "provisioner.example.ca"
+    fqdn: "provisioner.demo.net"
   - ip: "192.168.140.12"
-    fqdn: "satellite.example.ca"
+    fqdn: "satellite.demo.net"

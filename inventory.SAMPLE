@@ -2,27 +2,27 @@
 localhost
 
 [idm_primary]
-idm.example.ca
+idm.demo.net
 
 [idm_replicas]
-idmr1.example.ca
-idmr2.example.ca
+idmr1.demo.net
+idmr2.demo.net
 
 [sat_primary]
-satellite.example.ca
+satellite.demo.net
 
 [sat_capsule]
-capsule1.example.ca
-capsule2.example.ca
+capsule1.demo.net
+capsule2.demo.net
 
 [aap_controller]
-controller1.example.ca
+controller1.demo.net
 
 [automation_hub]
-ah1.example.ca
+ah1.demo.net
 
 [container_servers]
-containerhost1.example.ca
-containerhost2.example.ca
+containerhost1.demo.net
+containerhost2.demo.net
 
 [aws_nodes]

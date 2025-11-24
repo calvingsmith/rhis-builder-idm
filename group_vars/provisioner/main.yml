@@ -1,6 +1,6 @@
 ---
 
-ipa_server_fqdn: "idm.example.ca"
+ipa_server_fqdn: "idm.demo.net"
 ipa_client_dns_servers: "192.168.140.5"
 
 # These vault variables should be encrypted in your
@@ -9,7 +9,7 @@ ipa_admin_principal: "{{ ipa_admin_principal_vault }}"
 ipa_admin_password: "{{ ipa_admin_password_vault }}"
 
 # These variables get used outside of the redhat role, so are set here.
-ipa_server_domain: "example.ca"
+ipa_server_domain: "demo.net"
 ipa_server_realm: "{{ ipa_server_domain | upper }}"
 
 # ipaserver role variables

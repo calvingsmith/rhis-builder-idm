@@ -8,7 +8,7 @@ ipa_dm_password: "{{ ipa_dm_password_vault }}"
 ipa_default_user_password: "{{ ipa_default_user_password_vault }}"
 
 # These variables get used outside of the redhat role, so are set here.
-ipa_server_domain: "example.ca"
+ipa_server_domain: "demo.net"
 ipa_server_realm: "{{ ipa_server_domain | upper }}"
 
 # ipaserver role variables

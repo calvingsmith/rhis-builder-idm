@@ -49,7 +49,7 @@ It would be a strong recommendation for a production environment to keep the fol
 
 * ***ipa_dm_password_vault:*** This the directory manager password and is a highly sensitive in production environments.
 
-### host_vars for idm.example.ca
+### host_vars for idm.demo.net
 
 There is a sample system defined underneath host_vars. The files in the directory cover most of the the configuration options for the roles defined in rhis-builder-idm. You can model you own deployment after these configurations. Please make sure that you review them, especially the DNS configurations as they will need to be adjusted for your environment. 
 
