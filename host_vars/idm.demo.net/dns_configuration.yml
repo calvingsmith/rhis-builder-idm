@@ -4,8 +4,8 @@
 idm_dns_forward_zones:
   - name: "home"
     forwarders:
+      - ip_address: "192.168.25.1"
       - ip_address: "192.168.100.2"
-      - ip_address: "192.168.1.1"
     forward_policy: "only"
     skip_overlap_check: true
 
