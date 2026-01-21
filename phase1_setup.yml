@@ -55,6 +55,9 @@
     - name: "Apply role idm_users"
       ansible.builtin.include_role:
         name: idm_users
+        tags:
+          - tags_rhisam
+          - tags_idm_users 
 
     - name: "Apply role idm_user_groups"
       ansible.builtin.include_role:
