@@ -1,8 +1,8 @@
 ---
 # Set up the prerequisites, install idm, configure idm
 # our idm role encapsulates ipaserver and post configuration
-- name: "Register the provisioner to the idm primary"
-  hosts: provisioner
+- name: "Build the idm replicas"
+  hosts: idm_replicas
   become: true
   gather_facts: true
 
@@ -28,6 +28,10 @@
       ansible.builtin.include_vars:
         dir: "{{ vars_dir }}"
 
-    - name: "Apply role idm_client_register"
+    - name: "Apply role idm_pre"
       ansible.builtin.include_role:
-        name: idm_client_register
+        name: idm_pre
+
+    - name: "Apply role idm_replica"
+      ansible.builtin.include_role:
+        name: idm_replica

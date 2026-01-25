@@ -1,6 +1,6 @@
 - name: "Ensure state for idm user - {{ idm_user.login }}"
   redhat.rhel_idm.ipauser:
-    action: "{{ idm_user.action | default(omit) }}"                     # defaults to acting on user
+    action: "{{ idm_idm_user.action | default(omit) }}"                     # defaults to acting on idm_user
     ipaadmin_principal: "{{ ipa_admin_principal }}"
     ipaadmin_password: "{{ ipa_admin_password }}"
     name: "{{ idm_user.login }}"
@@ -21,7 +21,7 @@
     gid: "{{ idm_user.user_gid | default(omit) }}"                      # alias gidnumber == the private group gid or default group
     homedir: "{{ idm_user.home_dir | default(omit) }}"
     idp: "{{ idm_user.idp | default(omit) }}"                           # alias ipaidpconfiglink == this is the identity provider reference name
-    idp_user_id: "{{ idm_user.idp_user_id | default(omit) }}"           # alias ipaidpsub  == the string that identifies the user to the user.idp
+    idp_user_id: "{{ idm_user.idp_user_id | default(omit) }}"           # alias ipaidpsub  == the string that identifies the user to the idm_user.idp
     initials: "{{ idm_user.initials | default(omit) }}"                 # middle initials - a string
     manager: "{{ idm_user.managers | default(omit) }}"                  # a list
     noprivate: "{{ idm_user.noprivate | default(omit) }}"               # don't create the users private group
@@ -51,3 +51,8 @@
     userclass: "{{ idm_user.userclass | default(omit) }}"
     userstate: "{{ idm_user.userstate | default(omit) }}"
     state: "{{ idm_user.state | default(omit) }}"
+  tags:
+    - tags_rhis_builder
+    - tags_rhis_builder_idm
+    - tags_idm_post_install
+    - tags_idm_users

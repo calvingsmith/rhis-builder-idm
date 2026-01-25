@@ -1,5 +1,7 @@
 ---
+
 - name: Register to Red Hat Portal {{ inventory_hostname }}
+  when: not register_to_satellite
   ansible.builtin.include_role:
     name: redhat.rhel_system_roles.rhc
   vars:
@@ -11,3 +13,8 @@
     rhc_insights:
       state: "{{ rhc_insights_state }}"
       autoupdate: "{{ rhc_enable_auto_update }}"
+  tags:
+    - tags_rhis_builder
+    - tags_rhis_builder_idm
+    - tags_idm_pre
+    - tags_idm_install
